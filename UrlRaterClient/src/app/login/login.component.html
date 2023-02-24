@@ -1,0 +1,29 @@
+<mat-card class="box absolute-center" style="width: 190px; height: 230px">
+  <img *ngIf="Loading" src="/assets/images/spinner.svg" alt="loading" class="absolute-center " width="150px" />
+  <div *ngIf="!Loading">
+    <mat-card-title>
+      Login
+    </mat-card-title>
+
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>E-Mail / Username</mat-label>
+        <input matInput required type="text" [(ngModel)]="Name"> <!--todo: add username support-->
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput required type="password" [(ngModel)]="Password">
+      </mat-form-field>
+
+      <br />
+
+      <button mat-raised-button color="primary" (click)="OnLoginPressed()">Login!</button>
+
+      <div *ngIf="ErrorMessage" class="error-text" style="width: min-content;">{{ErrorMessage}}</div>
+    </mat-card-content>
+  </div>
+</mat-card>
+

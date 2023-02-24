@@ -1,0 +1,19 @@
+<div>
+  <div class="primary-text medium-font">{{PageTitle}}</div>
+
+  <button mat-button (click)="LikePressed()">
+    <mat-icon [color]="IsLiked ? null : 'primary'">thumb_up</mat-icon>
+    <span id="amountLikes" class="default-margin">{{Likes}}</span>
+
+
+  </button>
+  <button mat-button (click)="DislikePressed()">
+    <mat-icon [color]="IsDisliked ? null : 'primary'">thumb_down</mat-icon>
+    <span id="amountDislikes" class="default-margin">{{Dislikes}}</span>
+
+  </button>
+</div>
+
+<mat-divider></mat-divider>
+
+<app-comment-section></app-comment-section>

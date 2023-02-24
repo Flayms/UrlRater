@@ -1,0 +1,94 @@
+@import "~@angular/material/theming";
+@import 'variables';
+
+$defaultSpace: 5px;
+$borderRadius: 4px;
+$borderColor: #91969e;
+$sides: top, right, left, bottom;
+
+.primary-text {
+  color: mat-color($primaryPalette);
+}
+
+.accent-text {
+  color: mat-color($accentPalette);
+}
+
+.error-text {
+  color: mat-color($accentPalette);
+}
+
+@each $side in $sides {
+  .default-margin-#{$side} {
+    margin-#{$side}: $defaultSpace !important;
+  }
+
+  .default-padding-#{$side} {
+    padding-#{$side}: $defaultSpace !important;
+  }
+}
+
+.default-padding {
+  padding: $defaultSpace;
+}
+
+.default-margin {
+  margin: $defaultSpace;
+}
+
+.medium-font {
+  font-size: medium;
+}
+
+html, body {
+  width: 500px;
+  height: 600px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.default-margin {
+  margin: $defaultSpace !important;
+}
+
+.white-border {
+  border-color: white !important;
+}
+
+.box {
+  border-color: $borderColor;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: $borderRadius;
+ //padding: $defaultSpace;
+  margin: $defaultSpace auto;
+  width: fit-content;
+}
+
+.headerFlex {
+  display: flex;
+  width: 100%;
+}
+
+.marginCenterVertical {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.marginCenterHorizontal {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.margin-center {
+  margin: auto;
+}
+.absolute-center {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}

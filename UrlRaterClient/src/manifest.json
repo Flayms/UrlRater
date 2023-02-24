@@ -1,0 +1,28 @@
+{
+  "name": "Url Rater",
+  "description": "Rate - Like and Dislike every webpage",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "webNavigation",
+    "scripting"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "runtime.js"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "favicon.ico"
+    },
+    "icons": {
+      "16": "favicon.ico"
+    }
+  }
+}
